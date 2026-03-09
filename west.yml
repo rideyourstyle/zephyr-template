@@ -2,6 +2,10 @@ manifest:
   remotes:
     - name: zephyr-upstream
       url-base: https://github.com/zephyrproject-rtos
+    - name: hathach
+      url-base: https://github.com/hathach
+    - name: paramo-host-lcoal
+      url-base: file:///media/peter/57C6-D9E1/repos/paramo-host.git
 
   projects:
     - name: zephyr
@@ -12,6 +16,15 @@ manifest:
           - cmsis_6
           - hal_stm32
       path: Library/zephyr
+
+    - name: tinyusb
+      remote: hathach
+      revision: 0.19.0
+      path: LibraryZephyr/tinyUSB
+
+    - name: paramo-host
+      remote: paramo-host-local
+      revision: main
 
   self:
     path: Project/Zephyr
